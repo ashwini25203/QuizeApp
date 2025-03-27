@@ -1,0 +1,23 @@
+[
+    {
+      "question": "What is Angular?",
+      "options": ["Framework", "Library", "Language", "None of the above"],
+      "answer": "Framework"
+    },
+    {
+      "question": "Which directive is used for two-way data binding in Angular?",
+      "options": ["ngModel", "ngIf", "ngFor", "ngClass"],
+      "answer": "ngModel"
+    },
+    {
+      "question": "What is the default port for Angular apps?",
+      "options": ["3000", "8080", "4200", "8000"],
+      "answer": "4200"
+    },
+    {
+      "question": "Which Angular module is required for routing?",
+      "options": ["FormsModule", "HttpClientModule", "RouterModule", "CommonModule"],
+      "answer": "RouterModule"
+    }
+  ]
+  

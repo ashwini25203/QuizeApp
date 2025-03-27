@@ -1,0 +1,26 @@
+<div class="quiz-container" *ngIf="questions.length > 0; else loading">
+    
+    <!-- Display Current Question -->
+    <h2>{{ questions[currentQuestionIndex]?.question }}</h2>
+
+    <!-- Display Options -->
+    <div *ngFor="let option of questions[currentQuestionIndex]?.options" class="option-container">
+        <button (click)="selectOption(option)" 
+                [class.selected]="selectedOption === option">
+            {{ option }}
+        </button>
+    </div>
+
+    <!-- Display Selected Option -->
+    <p *ngIf="selectedOption">You selected: {{ selectedOption }}</p>
+
+    <!-- Navigation Button aligned to the right -->
+    <div class="btn-container">
+        <button (click)="nextQuestion()" class="next-btn">Next</button>
+    </div>
+</div>
+
+<!-- Loading Template -->
+<ng-template #loading>
+    <p class="loading">Loading questions...</p>
+</ng-template>
