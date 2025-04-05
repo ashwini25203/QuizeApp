@@ -1,0 +1,22 @@
+<div class="form-container">
+    <h2>Add Assignment</h2>
+  
+    <form (ngSubmit)="submitAssignment()" #assignmentForm="ngForm">
+      <label>Question:</label>
+      <textarea [(ngModel)]="assignment.question" name="question" required></textarea>
+  
+      <label>Options:</label>
+      <div *ngFor="let option of assignment.options; let i = index">
+        <input [(ngModel)]="assignment.options[i]" name="option{{i}}" placeholder="Option {{ i + 1 }}" required />
+      </div>
+  
+      <label>Correct Answer:</label>
+      <input [(ngModel)]="assignment.answer" name="answer" placeholder="Correct Option Text" required />
+  
+      <button type="submit">➕ Add Assignment</button>
+    </form>
+  
+    <p class="success" *ngIf="successMessage">{{ successMessage }}</p>
+    <p class="error" *ngIf="errorMessage">{{ errorMessage }}</p>
+  </div>
+  
