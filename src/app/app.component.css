@@ -1,0 +1,93 @@
+
+  /* ✅ General Styling */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  /* ✅ Navbar Styling */
+  .navbar {
+    background: #f8f9fa;  /* Soft white theme */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 15px 20px;
+    height: 70px;
+  }
+
+  /* ✅ Container */
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  /* ✅ Logo Styling */
+  .logo {
+    font-size: 30px;
+    color: #ff5733; /* Funky orange */
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease;
+  }
+
+  .logo:hover {
+    color: #007bff; /* Cool blue hover effect */
+    transform: scale(1.1);
+  }
+
+  /* ✅ Navigation Buttons */
+  .nav-buttons {
+    display: flex;
+    gap: 15px;
+  }
+
+  .btn {
+    text-decoration: none;
+    color: #504a4a;
+    font-size: 18px;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  /* ✅ Hover Effect */
+  .btn:hover {
+    transform: scale(1.1);
+  }
+
+  /* ✅ Active Page Highlight */
+  .active {
+    /* Dark background for active page */
+    /* color: black !important;
+    transform: scale(1.1); */
+  }
+
+  /* ✅ Mobile Responsiveness */
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .nav-buttons {
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .btn {
+      font-size: 16px;
+      padding: 10px 25px;
+    }
+
+    .logo {
+      font-size: 26px;
+    }
+  }
